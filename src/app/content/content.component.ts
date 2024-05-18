@@ -8,9 +8,14 @@ import {AxiosService} from "../axios.service";
 })
 export class ContentComponent {
 
+  componentToShow: string= "Welcome";
+
   constructor(private  axiosService: AxiosService) {
   }
 
+  showComponent(componentToShow: string):void{
+    this.componentToShow= componentToShow;
+  }
   onLogin(input: any) {
     this.axiosService.request(
       "POST",
@@ -20,7 +25,10 @@ export class ContentComponent {
         password: input.password
       }
 
-    );
+    ).then(response =>{
+      this.axiosService.setAuthToken(response.data.token);
+      this.componentToShow= "messages";
+    });
 
   }
   onRegister(input: any):void{
@@ -33,7 +41,10 @@ export class ContentComponent {
         login: input.login,
         password: input.password
       }
-    )
+    ).then(response =>{
+      this.axiosService.setAuthToken(response.data.token);
+      this.componentToShow= "messages";
+    });
 
   }
 }
