@@ -21,7 +21,7 @@ export class ContentComponent {
       "POST",
       "/login",
       {
-        login: input.login,
+        email: input.email, // change login to email
         password: input.password
       }
 
@@ -38,7 +38,7 @@ export class ContentComponent {
       {
         firstName: input.firstName,
         lastName: input.lastName,
-        login: input.login,
+        email: input.email, // change login to email
         password: input.password
       }
     ).then(response =>{
