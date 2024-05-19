@@ -15,7 +15,7 @@ export class LoginFormComponent {
   firstName : string="";
   lastName:string="";
 
-  login: string= "";
+  email: string = ""; //login: string= "";
   password: string= "";
 
   //Methodes to switch beetwen login form and register form
@@ -29,14 +29,14 @@ export class LoginFormComponent {
 
 
   onSubmitLogin(): void{
-    this.onSubmitLoginEvent.emit({"login": this.login, "password": this.password});
+    this.onSubmitLoginEvent.emit({"email": this.email, "password": this.password});
   }
 
 
   onSubmitRegister(): void{
     this.onSubmitRegisterEvent.emit({
       "firstName": this.firstName, "lastName": this.lastName,
-      "login": this.login, "password": this.password});
+      "email": this.email, "password": this.password});
   }
 
 }

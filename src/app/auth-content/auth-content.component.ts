@@ -19,7 +19,7 @@ export class AuthContentComponent {
       {}
 
     ).then(
-      (response)=> this.data=response.data
+      (response)=> this.data=response.data  // stockage de donne de backend dans le tableau data
     );
   }
 

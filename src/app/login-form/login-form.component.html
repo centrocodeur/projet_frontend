@@ -21,8 +21,8 @@
       <div [ngClass]="active == 'login' ? 'tab-pane fade show active' : 'tab-pane fade'">
     <form (ngSubmit)="onSubmitLogin()" #loginForm="ngForm">
        <div class="form-outline mb-4">
-        <input class="form-control" type="text" id="loginName" name="login" [(ngModel)]="login"/>
-         <label class="form-label" for="loginName">Username</label>
+        <input class="form-control" type="text" id="loginName" name="login" [(ngModel)]="email"/>
+         <label class="form-label" for="loginName">Email</label>
        </div>
 
       <div class="form-outline mb-4">
@@ -47,8 +47,8 @@
           </div>
 
           <div class="form-outline mb-4">
-            <input class="form-control" type="text" id="login" name="login" [(ngModel)]="login"/>
-            <label class="form-label" for="login">Username</label>
+            <input class="form-control" type="text" id="login" name="login" [(ngModel)]="email"/>
+            <label class="form-label" for="login">Email</label>
           </div>
 
 
