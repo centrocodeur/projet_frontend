@@ -25,11 +25,12 @@ export class LoginFormComponent {
 
   onRegisterTab(): void{
     this.active= "register";
-  }
+}
 
 
   onSubmitLogin(): void{
     this.onSubmitLoginEvent.emit({"email": this.email, "password": this.password});
+     window.localStorage.clear();  // clear localStorage
   }
 
 
@@ -37,6 +38,7 @@ export class LoginFormComponent {
     this.onSubmitRegisterEvent.emit({
       "firstName": this.firstName, "lastName": this.lastName,
       "email": this.email, "password": this.password});
+    window.localStorage.clear();
   }
 
 }
