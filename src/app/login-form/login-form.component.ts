@@ -14,7 +14,6 @@ export class LoginFormComponent {
   active: string= "login";
   firstName : string="";
   lastName:string="";
-
   email: string= "";
   password: string= "";
 
@@ -30,6 +29,7 @@ export class LoginFormComponent {
 
   onSubmitLogin(): void{
     this.onSubmitLoginEvent.emit({"email": this.email, "password": this.password});
+    window.localStorage.clear();  // clear localStorage
   }
 
 
@@ -37,6 +37,7 @@ export class LoginFormComponent {
     this.onSubmitRegisterEvent.emit({
       "firstName": this.firstName, "lastName": this.lastName,
       "email": this.email, "password": this.password});
+     window.localStorage.clear();
   }
 
 }
