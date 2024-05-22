@@ -14,8 +14,7 @@ export class LoginFormComponent {
   active: string= "login";
   firstName : string="";
   lastName:string="";
-
-  email: string = "";
+  email: string= "";
   password: string= "";
 
   //Methodes to switch beetwen login form and register form
