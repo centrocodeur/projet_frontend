@@ -29,7 +29,7 @@ export class LoginFormComponent {
 
   onSubmitLogin(): void{
     this.onSubmitLoginEvent.emit({"email": this.email, "password": this.password});
-     window.localStorage.clear();  // clear localStorage
+    window.localStorage.clear();  // clear localStorage
   }
 
 
@@ -37,7 +37,7 @@ export class LoginFormComponent {
     this.onSubmitRegisterEvent.emit({
       "firstName": this.firstName, "lastName": this.lastName,
       "email": this.email, "password": this.password});
-    window.localStorage.clear();
+     window.localStorage.clear();
   }
 
 }
