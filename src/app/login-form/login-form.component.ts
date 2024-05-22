@@ -24,7 +24,7 @@ export class LoginFormComponent {
 
   onRegisterTab(): void{
     this.active= "register";
-  }
+}
 
 
   onSubmitLogin(): void{
